@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 02, 2022 at 11:51 AM
--- Server version: 10.4.22-MariaDB
--- PHP Version: 8.1.2
+-- Generation Time: Dec 15, 2023 at 03:29 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.0.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -39,7 +39,7 @@ CREATE TABLE `products` (
   `psize` varchar(20) DEFAULT NULL,
   `soldper` varchar(10) DEFAULT NULL COMMENT 'kg; lt; pc;	',
   `image` varchar(500) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `products`
@@ -65,7 +65,7 @@ CREATE TABLE `sales` (
   `costprice` varchar(10) NOT NULL,
   `remarks` varchar(1000) NOT NULL,
   `salesdate` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `sales`
@@ -100,7 +100,7 @@ CREATE TABLE `stocks` (
   `quantity` varchar(10) NOT NULL,
   `warningquantity` varchar(10) NOT NULL,
   `costprice` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `stocks`
@@ -128,7 +128,7 @@ CREATE TABLE `suppliers` (
   `sphone` varchar(10) NOT NULL,
   `saddress` varchar(30) NOT NULL,
   `simage` varchar(500) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `suppliers`
@@ -153,14 +153,14 @@ CREATE TABLE `users` (
   `uaddress` varchar(30) NOT NULL,
   `uimage` varchar(500) NOT NULL,
   `uhashcheck` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `uname`, `uemail`, `upassword`, `uphone`, `uaddress`, `uimage`, `uhashcheck`) VALUES
-(1, 'Dipesh Gupta', 'dipeshgupta@gmail.com', '$2y$10$5WgR8GMBiDh8i86nbPIocO8AcvUkVAIcgOgVjqLHdS0xMRqHPJdAm', '12345678', 'Dhulabari', 'images/user/user_dipeshgupta@gmail.com.png', '$2y$10$u/yCqRSwZEYaXlqx8eFiFO4.SclwTHagqXDH9vuHyF7oPVu/iirQ.');
+(1, 'Avishek khatiwada', 'avishek@gmail.com', '$2y$10$5WgR8GMBiDh8i86nbPIocO8AcvUkVAIcgOgVjqLHdS0xMRqHPJdAm', '12345678', 'Kachankawal', 'images/user/user_user_avishek@gmail.com.png', '$2y$10$u/yCqRSwZEYaXlqx8eFiFO4.SclwTHagqXDH9vuHyF7oPVu/iirQ.');
 
 --
 -- Indexes for dumped tables
