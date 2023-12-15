@@ -11,6 +11,6 @@
 `composer update`
 `php artisan serve`
 
-#username : dipeshgupta@gmail.com
+#username : avishek@gmail.com
 #password : 1234567890
 --use remember me to login directly next time
